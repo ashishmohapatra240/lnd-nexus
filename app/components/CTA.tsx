@@ -37,7 +37,7 @@ export default function CTA() {
                       <Users className="h-5 w-5 text-blue-300" />
                     </div>
                     <p className="text-blue-50">
-                      Connect with top L&D professionals that perfectly match your organization's needs
+                      Connect with top L&D professionals that perfectly match your organization&apos;s needs
                     </p>
                   </div>
                   <div className="flex items-start">

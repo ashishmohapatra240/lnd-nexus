@@ -1,7 +1,7 @@
 "use client";
 
 import * as React from "react";
-
+import Image from "next/image";
 
 interface ImageWithFallbackProps {
   src: string;
@@ -29,9 +29,11 @@ export function ImageWithFallback({
   }
 
   return (
-    <img
+    <Image
       src={src}
       alt={alt}
+      width={400}
+      height={400}
       className={className}
       onError={() => setError(true)}
     />
