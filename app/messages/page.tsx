@@ -257,9 +257,7 @@ export default function Messages() {
             {/* Message Thread */}
             <div
               className={`flex-1 flex flex-col ${
-                !selectedContactId || (!isMobileView && window.innerWidth < 768)
-                  ? "hidden md:flex"
-                  : ""
+                !selectedContactId || (isMobileView ? "" : "hidden md:flex")
               }`}
             >
               {selectedContact ? (
@@ -268,12 +266,12 @@ export default function Messages() {
                   <div className="p-4 border-b border-slate-200 bg-white">
                     <div className="flex items-center justify-between">
                       <div className="flex items-center space-x-3">
-                        <button
+                        <Button
                           onClick={() => setIsMobileView(false)}
                           className="md:hidden p-2 hover:bg-slate-100 rounded-lg"
                         >
                           <ArrowLeft className="h-5 w-5" />
-                        </button>
+                        </Button>
                         <div className="w-10 h-10 rounded-full bg-gradient-to-br from-blue-500 to-blue-600 flex items-center justify-center text-white font-semibold">
                           {selectedContact.userType === "company" ? (
                             <Building className="h-5 w-5" />
